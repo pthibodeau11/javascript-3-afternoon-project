@@ -53,6 +53,21 @@ var employees = [
 //Code Here
 
 
+function employeeUpdater(){
+  employees.forEach(function(element, index){
+    if(element.firstName === "Theo"){
+      employees.splice([index], 1) 
+    }
+    console.log(element)
+    if(element.firstName === "Lorie"){
+      element.department = "HR"
+    }
+  });
+  return employees
+}
+
+employeeUpdater()
+
 
 ////////// PROBLEM 2 //////////
 
@@ -69,6 +84,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
+
+function removeDuplicates(array){
+  let noDuplicates = []
+  for (let i = 0; i < array.length; i++){
+    if(noDuplicates.indexOf(array[i]) == -1){
+      noDuplicates.push(array[i])
+    }
+  }
+  return noDuplicates
+}
 
 
 
